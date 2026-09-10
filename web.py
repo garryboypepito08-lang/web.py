@@ -1503,10 +1503,13 @@ section[data-testid="stSidebar"] [data-testid="stExpander"] summary{
   padding:10px 12px 10px 16px!important;border-radius:13px!important;
   background:linear-gradient(180deg,#102a21 0%, #0b1d18 100%)!important;
   border:1px solid rgba(134,255,194,.18)!important;border-left:3px solid #69f4b4!important;
-  color:#f5fff8!important;font-family:'Roboto','Poppins',sans-serif!important;font-weight:800!important;letter-spacing:.04em!important;font-size:10px!important;list-style:none!important;
+  color:#f5fff8!important;font-family:var(--engineering-font-condensed), 'Arial Narrow', sans-serif!important;font-weight:800!important;letter-spacing:.12em!important;font-size:10px!important;list-style:none!important;
   box-shadow:0 10px 18px rgba(0,0,0,.18)!important;transition:all .18s ease!important;
+  text-transform:uppercase;
+  transform:perspective(900px) rotateX(10deg) translateY(0);
+  animation:floatSidebarButton 6.5s ease-in-out infinite;
 }
-section[data-testid="stSidebar"] [data-testid="stExpander"] summary:hover{transform:translateX(3px);border-color:rgba(137,255,197,.6);box-shadow:0 14px 24px rgba(0,0,0,.24),0 0 18px rgba(105,244,180,.12)!important}
+section[data-testid="stSidebar"] [data-testid="stExpander"] summary:hover{transform:translateX(3px) translateY(-2px);border-color:rgba(137,255,197,.6);box-shadow:0 14px 24px rgba(0,0,0,.24),0 0 18px rgba(105,244,180,.12)!important}
 section[data-testid="stSidebar"] [data-testid="stExpander"] summary::-webkit-details-marker{display:none!important}
 section[data-testid="stSidebar"] [data-testid="stExpander"] .streamlit-expanderContent{padding:8px 0 0!important}
 /* glass controls */
@@ -1534,6 +1537,9 @@ input,textarea{color:#fff!important;-webkit-text-fill-color:#fff!important}input
 .cal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin-top:18px}.cal-card{position:relative;overflow:hidden;background:linear-gradient(145deg,rgba(16,69,40,.80),rgba(4,27,16,.85));border:1px solid rgba(165,255,195,.18);border-radius:24px;padding:20px;box-shadow:0 14px 34px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.08);transition:.22s cubic-bezier(.2,.8,.2,1);backdrop-filter:blur(14px)}.cal-card:hover{transform:translateY(-7px) scale(1.012);border-color:rgba(114,247,176,.45);box-shadow:0 24px 50px rgba(0,0,0,.40),0 0 30px rgba(114,247,176,.11)}.cal-date-badge{background:rgba(114,247,176,.10);color:#72f7b0;border:1px solid rgba(114,247,176,.28);padding:5px 11px;border-radius:999px;font-size:10px;font-weight:900}.cal-task-title{color:#fff;font-family:'Outfit';font-size:17px;font-weight:800}.cal-phase{color:#a8dcb8;font-size:12px}.cal-status-tag{font-size:9px;font-weight:900;padding:5px 10px;border-radius:999px;text-transform:uppercase}.badge-notstarted{background:rgba(255,255,255,.07);color:#d1d5db}.badge-inprogress{background:rgba(245,158,11,.14);color:#fbbf24}.badge-completed{background:rgba(34,197,94,.14);color:#65f394}
 [data-testid="stExpander"]{background:rgba(5,29,17,.58)!important;border:1px solid rgba(163,255,194,.15)!important;border-radius:20px!important;box-shadow:0 10px 25px rgba(0,0,0,.18)!important}.stAlert{border-radius:17px!important;background:rgba(8,42,24,.65)!important;border:1px solid rgba(163,255,194,.18)!important}
 @keyframes scan{0%,55%{transform:translateX(-130%)}80%,100%{transform:translateX(180%)}}
+@keyframes floatSidebarBrand{0%,100%{transform:perspective(900px) rotateX(12deg) rotateY(-8deg) translateY(0)}50%{transform:perspective(900px) rotateX(14deg) rotateY(-5deg) translateY(-3px)}}
+@keyframes floatSidebarSub{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+@keyframes floatSidebarButton{0%,100%{transform:perspective(900px) rotateX(8deg) translateY(0)}50%{transform:perspective(900px) rotateX(10deg) translateY(-2px)}}
 @media(max-width:900px){.block-container{padding:18px 14px 30px!important;margin:10px!important}.headbar-card{padding:16px}.headbar-title{font-size:24px!important}.headbar-subtitle{margin-left:92px}.hero-title{font-size:32px}.donut-wrap{flex-direction:column;align-items:flex-start}.donut{width:170px;height:170px;flex-basis:170px}.donut:after{inset:42px}.schedule{align-items:flex-start;flex-wrap:wrap}.open-planner{margin-left:0}}
 @media(max-width:600px){.headbar-card{display:block}.headbar-title{font-size:21px!important;gap:10px}.headbar-title img{width:52px;height:52px}.headbar-subtitle{margin-left:62px;font-size:8px}.headbar-time{margin-top:12px;display:inline-block}.hero-row{align-items:flex-start}.hero-logo{width:60px;height:60px}.hero-title{font-size:25px}.hero-sub{font-size:9px;letter-spacing:.14em}.dash-section{padding:16px}.tx-row{gap:8px}.tx-right{font-size:11px}.open-planner{width:100%;text-align:center}.sidebar-brand{padding:14px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
@@ -2369,17 +2375,20 @@ section[data-testid="stSidebar"] .stButton > button {
     margin: 5px 0 !important;
     padding: 11px 14px !important;
     border-radius: 14px !important;
-    font-family: 'Manrope', sans-serif !important;
+    font-family: var(--engineering-font-condensed), 'Arial Narrow', sans-serif !important;
     font-size: 11px !important;
     font-weight: 800 !important;
-    letter-spacing: .015em !important;
+    letter-spacing: .10em !important;
+    text-transform: uppercase !important;
     text-align: left !important;
     background: linear-gradient(145deg, rgba(15, 70, 44, .76), rgba(4, 31, 20, .82)) !important;
     border: 1px solid rgba(174, 255, 205, .16) !important;
     box-shadow: 0 8px 18px rgba(0, 0, 0, .18), inset 0 1px 0 rgba(255, 255, 255, .07) !important;
+    transform: perspective(900px) rotateX(8deg) translateY(0);
+    animation: floatSidebarButton 6.8s ease-in-out infinite;
 }
 section[data-testid="stSidebar"] .stButton > button:hover {
-    transform: translateX(4px) !important;
+    transform: translateX(4px) translateY(-2px) !important;
     background: linear-gradient(145deg, rgba(23, 104, 64, .90), rgba(5, 40, 25, .90)) !important;
     border-color: rgba(174, 255, 205, .48) !important;
     box-shadow: 0 14px 26px rgba(0, 0, 0, .26), 0 0 20px rgba(114, 247, 176, .10) !important;
@@ -3007,7 +3016,7 @@ if view == "home":
                   </div>
                   <div class="newdash-grid">
                     <div class="newdash-panel">
-                      <div class="newdash-panel-head"><span>Project overview</span><span>View all →</span></div>
+                      <div class="newdash-panel-head"><span>Portfolio</span><span>View all →</span></div>
                       <table class="newdash-table"><thead><tr><th>#</th><th>Project</th><th>Start Date</th><th>Status</th><th>Progress</th></tr></thead><tbody>
                         <tr><td>1</td><td>{project_name}</td><td>{manila_now().strftime('%b %d, %Y')}</td><td><span class="newdash-status">{escape_report_text(project_status)}</span></td><td><div class="newdash-progress"><i style="width:{progress}%"></i></div></td></tr>
                         {task_rows_html}

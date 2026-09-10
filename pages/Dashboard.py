@@ -198,16 +198,6 @@ def render():
     timeline_html += "</div>"
     st.markdown(timeline_html, unsafe_allow_html=True)
 
-    st.markdown("<div class='section-title'>Quick Action Hub</div>", unsafe_allow_html=True)
-    action_labels = ['Add Project', 'Add Material', 'Process Payroll', 'View Reports']
-    action_icons = ['🏗', '📦', '💸', '📊']
-    action_routes = ['Project Overview', 'Materials', 'Payroll Operations', 'Reports']
-    quick_cols = st.columns(4)
-    for idx, col in enumerate(quick_cols):
-        with col:
-            if st.button(f"{action_icons[idx]} {action_labels[idx]}", key=f'action_tile_{idx}', use_container_width=True):
-                navigate(action_routes[idx])
-
     widget_cols = st.columns(4)
     widgets = [
         ('Live System Status', 'ONLINE', '99.9% uptime', 'emerald'),
@@ -228,5 +218,15 @@ def render():
                 """,
                 unsafe_allow_html=True,
             )
+
+    st.markdown("<div class='section-title'>Quick Action Hub</div>", unsafe_allow_html=True)
+    action_labels = ['Add Project', 'Add Material', 'Process Payroll', 'View Reports']
+    action_icons = ['🏗', '📦', '💸', '📊']
+    action_routes = ['Project Overview', 'Materials', 'Payroll Operations', 'Reports']
+    quick_cols = st.columns(4)
+    for idx, col in enumerate(quick_cols):
+        with col:
+            if st.button(f"{action_icons[idx]} {action_labels[idx]}", key=f'action_tile_{idx}', use_container_width=True):
+                navigate(action_routes[idx])
 
     st.caption('Ailyn House Project Control System')
