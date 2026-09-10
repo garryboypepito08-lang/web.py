@@ -1,0 +1,6 @@
+[
+  {"id": 1, "name": "Cement Bags", "supplier": "Metro Supply", "stock": 150, "unit_cost": 210, "low_stock": 50},
+  {"id": 2, "name": "Steel Bars", "supplier": "Alpha Steel", "stock": 80, "unit_cost": 440, "low_stock": 30},
+  {"id": 3, "name": "Roof Tiles", "supplier": "TopBuild Materials", "stock": 60, "unit_cost": 185, "low_stock": 25},
+  {"id": 4, "name": "Paint", "supplier": "Colorworks", "stock": 110, "unit_cost": 160, "low_stock": 40}
+]

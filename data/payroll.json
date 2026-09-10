@@ -1,0 +1,6 @@
+[
+  {"employee_id": 1, "name": "Juan Dela Cruz", "basic_pay": 22000, "overtime": 3000, "deductions": 1500, "net_pay": 23500},
+  {"employee_id": 2, "name": "Maria Santos", "basic_pay": 28000, "overtime": 2000, "deductions": 1800, "net_pay": 29200},
+  {"employee_id": 3, "name": "Pedro Reyes", "basic_pay": 20000, "overtime": 2500, "deductions": 1400, "net_pay": 21100},
+  {"employee_id": 4, "name": "Ana Lim", "basic_pay": 19000, "overtime": 1000, "deductions": 1200, "net_pay": 18800}
+]

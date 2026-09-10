@@ -1,0 +1,7 @@
+[
+  {"id": 1, "name": "Ailyn Residences", "location": "Quezon City", "start_date": "2025-01-15", "status": "In Progress", "progress": 72, "budget": 2500000},
+  {"id": 2, "name": "Ailyn Commercial Bldg.", "location": "Makati City", "start_date": "2025-02-03", "status": "In Progress", "progress": 58, "budget": 3400000},
+  {"id": 3, "name": "Ailyn Townhouse", "location": "Cavite", "start_date": "2025-03-10", "status": "On Hold", "progress": 32, "budget": 1800000},
+  {"id": 4, "name": "Ailyn Warehouse", "location": "Laguna", "start_date": "2025-04-22", "status": "In Progress", "progress": 45, "budget": 2100000},
+  {"id": 5, "name": "Ailyn Office Building", "location": "Pasig City", "start_date": "2025-06-01", "status": "Not Started", "progress": 0, "budget": 2800000}
+]

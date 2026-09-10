@@ -1,0 +1,6 @@
+[
+  {"id": 1, "name": "Juan Dela Cruz", "position": "Site Engineer", "department": "Engineering", "attendance": 96, "status": "Active"},
+  {"id": 2, "name": "Maria Santos", "position": "Project Manager", "department": "Management", "attendance": 98, "status": "Active"},
+  {"id": 3, "name": "Pedro Reyes", "position": "Foreman", "department": "Construction", "attendance": 89, "status": "Active"},
+  {"id": 4, "name": "Ana Lim", "position": "Accountant", "department": "Finance", "attendance": 92, "status": "Active"}
+]
